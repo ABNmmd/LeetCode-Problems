@@ -7,16 +7,13 @@ struct ListNode
     struct ListNode *next;
 };
 
-int mcd(int a, int b)
-{
-    if (a % b == 0)
-    {
-        return b;
+int mcd(int a, int b){
+    while (b != 0 ){
+        int temp = b; 
+        b = a % b; 
+        a = temp; 
     }
-    else
-    {
-        return mcd(b, a % b);
-    }
+    return a; 
 }
 
 struct ListNode *insertGreatestCommonDivisors(struct ListNode *head)
