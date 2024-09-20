@@ -5,9 +5,9 @@
 var shortestPalindrome = function (s) {
     let slen = s.length;
     if (slen === 0) return '';
-    
+
     let left = 0;
-    for (let right = slen-1; right >= 0; right-- ) {
+    for (let right = slen - 1; right >= 0; right--) {
         if (s[right] == s[left]) left++;
     }
 
