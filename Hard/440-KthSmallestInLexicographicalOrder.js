@@ -17,15 +17,18 @@ var findKthNumber = function (n, k) {
             k--;
         }
     }
+
     return curr;
 };
 
 var cntSteps = function (n, prefx1, prefx2) {
     let steps = 0;
+
     while (prefx1 <= n) {
         steps += Math.min(n + 1, prefx2) - prefx1;
         prefx1 *= 10;
         prefx2 *= 10;
     }
+    
     return steps;
 }
