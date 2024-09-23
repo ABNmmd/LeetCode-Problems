@@ -12,6 +12,7 @@ var minExtraChar = function (s, dictionary) {
     for (let st = n - 1; st >= 0; st--) {
         let cur = '';
         dp[st] = dp[st + 1] + 1;
+
         for (let e = st; e < n; e++) {
             cur += s[e];
             if (dicSet.has(cur)) {
@@ -19,5 +20,6 @@ var minExtraChar = function (s, dictionary) {
             }
         }
     }
+    
     return dp[0];
 };
