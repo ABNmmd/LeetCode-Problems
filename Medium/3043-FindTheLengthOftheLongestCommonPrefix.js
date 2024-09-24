@@ -5,13 +5,14 @@
  */
 var longestCommonPrefix = function (arr1, arr2) {
     let arr1_prefixes = new Set();
-
+    
     for (val of arr1) {
         while (!arr1_prefixes.has(val) && val > 0) {
             arr1_prefixes.add(val);
             val = Math.floor(val / 10);
         }
     }
+
     let longestPrefix = 0;
     for (val of arr2) {
         while (!arr1_prefixes.has(val) && val > 0) {
@@ -21,5 +22,6 @@ var longestCommonPrefix = function (arr1, arr2) {
             longestPrefix = Math.max(longestPrefix, String(val).length);
         }
     }
+
     return longestPrefix;
 };
