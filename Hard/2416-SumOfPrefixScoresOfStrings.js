@@ -2,15 +2,15 @@
  * @param {string[]} words
  * @return {number[]}
  */
-var sumPrefixScores = function(words) {
+var sumPrefixScores = function (words) {
     let trie = new Trie();
     let scores = new Array(words.length).fill(0);
 
-    for (const word of words){
+    for (const word of words) {
         trie.insert(word);
     }
 
-    for (let i=0; i<words.length; i++){
+    for (let i = 0; i < words.length; i++) {
         scores[i] = trie.countPrefixes(words[i]);
     }
 
@@ -32,7 +32,7 @@ class Trie {
     insert(word) {
         let node = this.root;
         for (const char of word) {
-            if (!node.next[char]){
+            if (!node.next[char]) {
                 node.next[char] = new TrieNode();
             }
             node.next[char].cnt++;
@@ -40,7 +40,7 @@ class Trie {
         }
     }
 
-    countPrefixes(word){
+    countPrefixes(word) {
         let node = this.root;
         let score = 0;
         for (const char of word) {
