@@ -8,6 +8,7 @@ var MyCalendar = function () {
  * @param {number} end
  * @return {boolean}
  */
+
 MyCalendar.prototype.book = function (start, end) {
     for (let [s, e] of this.calendar) {
         if (s < end && start < e) return false;
