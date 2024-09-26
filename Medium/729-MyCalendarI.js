@@ -15,9 +15,3 @@ MyCalendar.prototype.book = function (start, end) {
     this.calendar.push([start, end]);
     return true;
 };
-
-/** 
- * Your MyCalendar object will be instantiated and called as such:
- * var obj = new MyCalendar()
- * var param_1 = obj.book(start,end)
- */
