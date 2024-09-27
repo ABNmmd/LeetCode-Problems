@@ -20,7 +20,7 @@ MyCalendarTwo.prototype.book = function (start, end) {
         overlapped_booking += this.bookingCount.get(key);
 
         if (overlapped_booking > this.maxOverlappedBooking) {
-            
+
             this.bookingCount.set(start, this.bookingCount.get(start) - 1);
             this.bookingCount.set(end, this.bookingCount.get(end) + 1);
 
