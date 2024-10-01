@@ -3,7 +3,7 @@
  * @param {number} k
  * @return {boolean}
  */
-var canArrange = function(arr, k) {
+var canArrange = function (arr, k) {
     let remainderCount = new Map();
     for (let num of arr) {
         let remainder = ((num % k) + k) % k;
