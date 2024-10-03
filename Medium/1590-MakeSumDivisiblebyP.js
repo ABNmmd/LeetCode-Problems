@@ -3,14 +3,14 @@
  * @param {number} p
  * @return {number}
  */
-var minSubarray = function(nums, p) {
+var minSubarray = function (nums, p) {
     let n = nums.length;
     let totalSum = 0;
 
     for (num of nums) {
         totalSum += num;
     }
-    
+
     let target = totalSum % p;
     if (target == 0) return 0;
 
@@ -19,7 +19,7 @@ var minSubarray = function(nums, p) {
     let curntSum = 0;
     let minLen = n;
 
-    for (let i=0; i<n; i++) {
+    for (let i = 0; i < n; i++) {
         curntSum = (curntSum + nums[i]) % p;
 
         needed = (curntSum - target + p) % p;
