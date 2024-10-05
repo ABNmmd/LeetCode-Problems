@@ -25,7 +25,7 @@ var checkInclusion = function (s1, s2) {
         // Check if the two maps match
         if (matches(s1map, s2map)) return true;
     }
-    
+
     return false;
 
     // Helper function to compare two maps
