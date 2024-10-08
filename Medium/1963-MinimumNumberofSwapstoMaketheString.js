@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-var minSwaps = function(s) {
+var minSwaps = function (s) {
     let stackSize = 0;
     for (c of s) {
         if (c == '[') stackSize++
