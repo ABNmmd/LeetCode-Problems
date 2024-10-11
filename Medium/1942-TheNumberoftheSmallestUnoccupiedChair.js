@@ -3,11 +3,11 @@
  * @param {number} targetFriend
  * @return {number}
  */
-var smallestChair = function(times, targetFriend) {
+var smallestChair = function (times, targetFriend) {
     let n = times.length;
     let events = [];
 
-    for (let i=0; i<n; i++) {
+    for (let i = 0; i < n; i++) {
         events.push([times[i][0], i]);
         events.push([times[i][1], ~i]);
     }
@@ -27,9 +27,9 @@ var smallestChair = function(times, targetFriend) {
         if (friend >= 0) {
             let chair = availableChairs.shift();
             if (friend === targetFriend) {
-                return chair; 
+                return chair;
             }
-            occupiedChairs.push([times[friend][1], chair]); 
+            occupiedChairs.push([times[friend][1], chair]);
             occupiedChairs.sort((a, b) => a[0] - b[0]);
         }
     }
