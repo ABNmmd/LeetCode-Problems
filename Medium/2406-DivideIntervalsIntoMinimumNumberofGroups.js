@@ -2,9 +2,9 @@
  * @param {number[][]} intervals
  * @return {number}
  */
-var minGroups = function(intervals) {
-    let  events = [];
-    
+var minGroups = function (intervals) {
+    let events = [];
+
     for (let interval of intervals) {
         events.push([interval[0], 1]);
         events.push([interval[1] + 1, -1]);
