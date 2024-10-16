@@ -26,5 +26,6 @@ var longestDiverseString = function (a, b, c) {
             curra = 0; currb = 0;
         }
     }
+    
     return ans.join('');
 };
