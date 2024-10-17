@@ -8,7 +8,7 @@ var maximumSwap = function (num) {
     let si1 = -1;
     let si2 = -1;
 
-    for (let i = numStr.length-1; i >= 0; i--) {
+    for (let i = numStr.length - 1; i >= 0; i--) {
         if (maxDigitIndx == -1 || numStr[i] > numStr[maxDigitIndx]) maxDigitIndx = i;
         if (numStr[i] < numStr[maxDigitIndx]) {
             si1 = i;
