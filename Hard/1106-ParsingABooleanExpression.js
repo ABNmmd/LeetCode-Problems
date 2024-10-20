@@ -14,7 +14,6 @@ var parseBoolExpr = function (expression) {
             }
             st.pop();
             let op = st.pop();
-
             let res = evaluateSubExp(op, val);
             st.push(res);
         } else if (currChar != ',') {
