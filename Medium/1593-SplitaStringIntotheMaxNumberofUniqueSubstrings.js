@@ -13,11 +13,13 @@ var backtrack = function (s, start, seen) {
 
     for (let end = start + 1; end <= s.length; end++) {
         let subStr = s.substring(start, end);
+
         if (!seen.has(subStr)) {
             seen.add(subStr);
             maxCnt = Math.max(maxCnt, 1 + backtrack(s, end, seen));
             seen.delete(subStr);
         }
     }
+    
     return maxCnt;
 }
