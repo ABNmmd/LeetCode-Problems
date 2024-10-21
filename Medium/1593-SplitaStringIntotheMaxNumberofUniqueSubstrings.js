@@ -2,12 +2,12 @@
  * @param {string} s
  * @return {number}
  */
-var maxUniqueSplit = function(s) {
+var maxUniqueSplit = function (s) {
     let seen = new Set();
     return backtrack(s, 0, seen);
 };
 
-var backtrack = function(s, start, seen) {
+var backtrack = function (s, start, seen) {
     if (start == s.length) return 0;
     let maxCnt = 0;
 
